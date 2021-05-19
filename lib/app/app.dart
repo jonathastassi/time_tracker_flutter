@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:time_tracker_flutter_course/app/services/auth.dart';
 import 'package:time_tracker_flutter_course/app/ui/landing/landing_page.dart';
+import 'package:provider/provider.dart';
 
 class App extends StatelessWidget {
   @override
@@ -10,7 +12,10 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: LandingPage(),
+      home: Provider(
+        create: (_) => Auth(),
+        child: LandingPage(),
+      ),
     );
   }
 }
