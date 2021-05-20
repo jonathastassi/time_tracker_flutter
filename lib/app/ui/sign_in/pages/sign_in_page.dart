@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:time_tracker_flutter_course/app/services/auth.dart';
+import 'package:time_tracker_flutter_course/app/ui/sign_in/pages/email_sign_in_page.dart';
 import 'package:time_tracker_flutter_course/app/ui/sign_in/widgets/sign_in_button.dart';
 import 'package:time_tracker_flutter_course/app/ui/sign_in/widgets/social_sign_in_button.dart';
 
@@ -8,6 +9,20 @@ class SignInPage extends StatelessWidget {
   void _signInAnnonymous(BuildContext context) async {
     final _auth = Provider.of<Auth>(context, listen: false);
     await _auth.signInAnnonymous();
+  }
+
+  void _signInWithGoogle(BuildContext context) async {
+    final _auth = Provider.of<Auth>(context, listen: false);
+    await _auth.signInWithGoogle();
+  }
+
+  void _signInWithEmailAndPassword(BuildContext context) async {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        fullscreenDialog: true,
+        builder: (context) => EmailSignInPage(),
+      ),
+    );
   }
 
   @override
@@ -37,7 +52,7 @@ class SignInPage extends StatelessWidget {
             SocialSignInButton(
               label: 'Sign in with Google',
               image: 'assets/images/google-logo.png',
-              onPressed: () {},
+              onPressed: () => _signInWithGoogle(context),
               color: Colors.white,
               fontColor: Colors.black87,
             ),
@@ -48,7 +63,7 @@ class SignInPage extends StatelessWidget {
               label: "Sign in with e-mail",
               color: Colors.indigo,
               fontColor: Colors.white,
-              onPressed: () {},
+              onPressed: () => _signInWithEmailAndPassword(context),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
