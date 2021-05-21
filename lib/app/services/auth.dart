@@ -6,7 +6,8 @@ abstract class BaseAuth {
 
   Future<void> signOut();
   Future<void> signInAnnonymous();
-  Future<void> signInWithEmailAndPassword();
+  Future<void> signInWithEmailAndPassword(String email, String password);
+  Future<void> createUserWithEmailAndPassword(String email, String password);
   Future<void> signInWithGoogle();
 }
 
@@ -28,9 +29,13 @@ class Auth implements BaseAuth {
   }
 
   @override
-  Future<void> signInWithEmailAndPassword() {
-    // TODO: implement signInWithEmailAndPassword
-    throw UnimplementedError();
+  Future<void> signInWithEmailAndPassword(String email, String password) async {
+    await _auth.signInWithEmailAndPassword(email: email, password: password);
+  }
+
+  @override
+  Future<void> createUserWithEmailAndPassword(String email, String password) async {
+    await _auth.createUserWithEmailAndPassword(email: email, password: password);
   }
 
   @override
