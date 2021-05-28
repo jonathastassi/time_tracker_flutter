@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:time_tracker_flutter_course/app/services/auth.dart';
-import 'package:time_tracker_flutter_course/app/ui/landing/landing_page.dart';
+import 'package:time_tracker_flutter_course/app/features/landing/landing_page.dart';
 import 'package:provider/provider.dart';
 
 class App extends StatelessWidget {

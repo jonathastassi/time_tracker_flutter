@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:time_tracker_flutter_course/app/services/auth.dart';
-import 'package:time_tracker_flutter_course/app/ui/home/home_page.dart';
-import 'package:time_tracker_flutter_course/app/ui/sign_in/pages/sign_in_page.dart';
+import 'package:time_tracker_flutter_course/app/features/home/home_page.dart';
+import 'package:time_tracker_flutter_course/app/features/sign_in/pages/sign_in_page.dart';
 
 class LandingPage extends StatelessWidget {
   @override

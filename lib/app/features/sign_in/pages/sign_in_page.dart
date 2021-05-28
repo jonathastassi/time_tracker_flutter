@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:time_tracker_flutter_course/app/core/widgets/show_alert_dialog.dart';
 import 'package:time_tracker_flutter_course/app/services/auth.dart';
-import 'package:time_tracker_flutter_course/app/ui/sign_in/pages/email_sign_in_page.dart';
-import 'package:time_tracker_flutter_course/app/ui/sign_in/widgets/sign_in_button.dart';
-import 'package:time_tracker_flutter_course/app/ui/sign_in/widgets/social_sign_in_button.dart';
+import 'package:time_tracker_flutter_course/app/features/sign_in/pages/email_sign_in_page.dart';
+import 'package:time_tracker_flutter_course/app/features/sign_in/widgets/sign_in_button.dart';
+import 'package:time_tracker_flutter_course/app/features/sign_in/widgets/social_sign_in_button.dart';
 
 class SignInPage extends StatefulWidget {
   @override

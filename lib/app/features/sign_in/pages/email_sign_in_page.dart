@@ -1,10 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:time_tracker_flutter_course/app/core/widgets/custom_elevated_button.dart';
 import 'package:time_tracker_flutter_course/app/core/widgets/show_alert_dialog.dart';
 import 'package:time_tracker_flutter_course/app/services/auth.dart';
-import 'package:time_tracker_flutter_course/app/ui/sign_in/validators/sign_in_validators.dart';
+import 'package:time_tracker_flutter_course/app/features/sign_in/validators/sign_in_validators.dart';
 
 enum FormTypeSignIn {
   register,
